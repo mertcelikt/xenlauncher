@@ -1,2 +1,3 @@
-# Flutter
-İstinye University Student Projects.
+# xenolauncher
+
+A new Flutter project.
