@@ -151,7 +151,7 @@ EKLENECEK
 
 ## İletişim
 
-- Proje Bağlantısı: https://github.com/mertcelikt/Q-Flutter
+- Proje Bağlantısı: https://github.com/mertcelikt/xenlauncher
 
 - İstinye Üniversitesi: [https://www.istinye.edu.tr/](https://www.istinye.edu.tr/)
 
