@@ -1,6 +1,8 @@
 //acılış ekranımız buraya gelecek
+import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:lottie/lottie.dart';
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({super.key});
@@ -11,49 +13,56 @@ class LoadingScreen extends StatelessWidget {
       backgroundColor: Color(0xFF005477),
 
 
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          // Logo ve yükleme göstergesi bölümü
-          Container(
-            width: double.infinity,
+      body: SizedBox.expand(
+           // width: double.infinity,
             child: Column(
               children: [
                 // Logo bölümü
-                Container(
-                  width: 100,
-                  height: 100,
+                Expanded
+                (
+                  child:Container( 
+                  
+                
+                  width: 350,
+                  height: 350,
                   child: Image.asset(
                     'assets/images/logo.webp',
                     fit: BoxFit.contain,
                   ),
                 ),
+                  ),
+               
                 
-                const SizedBox(height: 30),
                 
-                // Yükleme ikonu
-                const Icon(
-                  CupertinoIcons.arrow_2_circlepath,
-                  size: 40,
-                  color:Color(0xFF780606),
-              
-                ),
-                
-                const SizedBox(height: 20),
                 
                 // Yükleniyor yazısı
-                const Text(
-                  'Yükleniyor...',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
+                //CircularProgressIndicator(),
+                SizedBox(
+                  width:200,
+                child:DotLottieLoader.fromAsset("assets/motions/loading.lottie",
+                  frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
+                if (dotlottie != null) {
+                  return Lottie.memory(dotlottie.animations.values.single);
+                } else {
+                  return Container();
+                }
+              },
+              ),
+                ),   
+                
+               
+
+
+                //biraz boşluk lazım
+                SizedBox(height:1),
+              ],
                   ),
                 ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
+              
+            );
+          
+        
+      
+    
   }
 }
