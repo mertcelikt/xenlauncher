@@ -2,6 +2,7 @@
 import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 
 class LoadingScreen extends StatelessWidget {
@@ -37,7 +38,9 @@ class LoadingScreen extends StatelessWidget {
                 
                 // Yükleniyor yazısı
                 //CircularProgressIndicator(),
-                SizedBox(
+                InkWell(
+                  onTap:() => context.go("/home"),
+                child: SizedBox(
                   width:200,
                 child:DotLottieLoader.fromAsset("assets/motions/loading.lottie",
                   frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
@@ -48,7 +51,8 @@ class LoadingScreen extends StatelessWidget {
                 }
               },
               ),
-                ),   
+                ),  
+                ), 
                 
                
 

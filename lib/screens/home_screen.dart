@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF005477), 
       // AppBar
       appBar: AppBar(
         title: const Text('Ana Sayfa'),
@@ -18,6 +19,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+    ),
 
       // Drawer (Yan Menü)
       drawer: Drawer(
