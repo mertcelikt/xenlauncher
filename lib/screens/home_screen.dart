@@ -1,8 +1,13 @@
-//ana ekran 
+// ana ekran
+
 import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
+
+import '../core/constants.dart';
+import '../widgets/bottom_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,38 +15,38 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF005477), 
+      backgroundColor: arkaplanRenkim, // .fromARGB(255, 35, 47, 59),
       // AppBar
       appBar: AppBar(
-        title: const Text('Ana Sayfa'),
+        backgroundColor: const Color.fromARGB(255, 28, 17, 66),
+        title: const Text('Q'),
         actions: [
           IconButton(
-            icon: const Icon(CupertinoIcons.bell),
+            icon: const Icon(CupertinoIcons.app),
             onPressed: () {},
           ),
         ],
       ),
-   
 
       // Drawer (Yan Menü)
       drawer: Drawer(
+        backgroundColor: arkaplanRenkim,
+        elevation: 0,
         child: Column(
           children: [
             // Drawer Header
             Container(
               height: 200,
-              color: Color(0xFF780606),
+              // color: Colors.blue,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Icon(
                     CupertinoIcons.person_circle,
                     size: 80,
-                    color: Color(0xFFFFFFFF),
+                    color: Colors.black87,
                   ),
                   const SizedBox(height: 10),
-                  // sry wrong place
-                  
                 ],
               ),
             ),
@@ -51,6 +56,21 @@ class HomeScreen extends StatelessWidget {
               title: const Text('Ana Sayfa'),
               onTap: () {
                 Navigator.pop(context);
+              },
+            ),
+
+            ListTile(
+              leading: const Icon(CupertinoIcons.search),
+              title: const Text('History'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(CupertinoIcons.person),
+              title: const Text('Profile'),
+              onTap: () {
+                context.go("/profile");
               },
             ),
             ListTile(
@@ -71,42 +91,25 @@ class HomeScreen extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(16),
               child: SizedBox(
-                  width:200,
-                child:DotLottieLoader.fromAsset("assets/motions/robot.lottie",
+                width: double.infinity,
+                child: DotLottieLoader.fromAsset(
+                  "assets/motions/q2.lottie",
                   frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
-                if (dotlottie != null) {
-                  return Lottie.memory(dotlottie.animations.values.single);
-                } else {
-                  return Container();
-                }
-              },
+                    if (dotlottie != null) {
+                      return Lottie.memory(dotlottie.animations.values.single);
+                    } else {
+                      return Container();
+                    }
+                  },
+                ),
               ),
-                ),  
             ),
           ),
         ],
       ),
 
       // Alt navigasyon çubuğu
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.home),
-            label: 'Ana Sayfa',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.search),
-            label: 'Keşfet',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.person),
-            label: 'Profil',
-          ),
-        ],
-        onTap: (index) {
-          // Navigasyon işlemleri buraya gelecek
-        },
-      ),
+      bottomNavigationBar: BottomMenu(),
     );
   }
 }
