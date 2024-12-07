@@ -1,6 +1,8 @@
 //ana ekran 
+import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:lottie/lottie.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,7 +21,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-    ),
+   
 
       // Drawer (Yan Menü)
       drawer: Drawer(
@@ -35,16 +37,11 @@ class HomeScreen extends StatelessWidget {
                   const Icon(
                     CupertinoIcons.person_circle,
                     size: 80,
-                    color: Colors.white,
+                    color: Color(0xFFFFFFFF),
                   ),
                   const SizedBox(height: 10),
-                  const Text(
-                    'Kullanıcı Adı',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
+                  // sry wrong place
+                  
                 ],
               ),
             ),
@@ -73,7 +70,18 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: Container(
               padding: const EdgeInsets.all(16),
-              child: const Text('Ana Sayfa İçeriği'),
+              child: SizedBox(
+                  width:200,
+                child:DotLottieLoader.fromAsset("assets/motions/robot.lottie",
+                  frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
+                if (dotlottie != null) {
+                  return Lottie.memory(dotlottie.animations.values.single);
+                } else {
+                  return Container();
+                }
+              },
+              ),
+                ),  
             ),
           ),
         ],
