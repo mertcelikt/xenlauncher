@@ -12,7 +12,7 @@ class ProfileScreen extends StatelessWidget {
       backgroundColor: arkaplanRenkim, // .fromARGB(255, 35, 47, 59),
 
       body: Center(
-        child: Text("Hoşgeldin Paşam, Böyle alalım seni... Bi dakika... Sayfayı daha yapmamışın, yap gel."),
+        child: Text("Profil Ekranıma Hoşgeldiniz...."),
       ),
       bottomNavigationBar: BottomMenu(),
     );
