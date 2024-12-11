@@ -109,7 +109,68 @@ class HomeScreen extends StatelessWidget {
       ),
 
       // Alt navigasyon çubuğu
-      bottomNavigationBar: BottomMenu(),
+      bottomNavigationBar: Container(
+        height:70,
+        child:Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(onPressed: () { 
+              context.go("/home");
+            },
+            icon: Icon (
+              CupertinoIcons.home,
+            ),
+
+            ),
+            IconButton(
+              onPressed: () {
+                context.go("/search");
+              },
+              icon: Icon(
+                CupertinoIcons.search,
+              ),
+            ),
+
+            
+
+            IconButton(onPressed: () {
+              context.go("/voice");
+
+            },
+             icon: Icon(
+              Icons.android,
+             ),
+            ),
+
+            IconButton(onPressed: () {},
+             icon: Icon(
+              CupertinoIcons.video_camera,
+             ),
+            ),
+            IconButton(onPressed: () {
+              context.go("/profile");
+
+            },
+
+          
+             icon: Icon(
+              CupertinoIcons.person,
+             ),
+            ),
+
+
+
+
+
+            
+ 
+
+          ],
+        
+        ),
+      
+    ),
     );
+    
   }
 }
