@@ -45,6 +45,13 @@ Android 7.0+
 - Akıcı yapay zeka avatar **animasyonları** desteği.  
 - **TTS (Metinden Sese)** ve **STT (Sesten Metne)** desteği.  
 - Yapay zeka **sohbet odası** seçeneği.  
-- Genel yapay zeka sohbet işlevleri (örneğin: **kişilik, mesaj stili, konuşma tarzı**).  
+- Genel yapay zeka sohbet işlevleri (örneğin: **kişilik, mesaj stili, konuşma tarzı**).
+
+## Notlar
+
+- Gamification.
+- Rankings.
+- Donations.
+- 
   
   
