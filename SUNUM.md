@@ -52,6 +52,5 @@ Android 7.0+
 - Gamification.
 - Rankings.
 - Donations.
-- 
   
-  
+![İstinye Üniversitesi](https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2024/09/nova-launcher-layouts.jpg?q=49&fit=crop&w=825&dpr=2)
