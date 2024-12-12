@@ -2,19 +2,20 @@
 # XenLauncher
 
   
-
+![İstinye Üniversitesi](https://user-uploads.perchance.org/file/6cc596e75d7c5a180a2e21350acd1556.webp)
 
 
   
 
 ## Projemizin Amacı
 
-Kullanıcıların dijital cihazlarını tam anlamıyla kendi tarzlarına uygun hale getirmelerini sağlayarak yaratlıcılığını ortaya çıkarmalarına yardımcı olan bir platform sunmak. XenLauncher, teknolojiyi sadece bir araç değil, bireylerin kendilerini ifade edebilecekleri bir ortam haline getiriyor.
-  
+Kullanıcıların dijital cihazlarını tam anlamıyla kendi tarzlarına uygun hale getirmelerini sağlayarak yaratlıcılığını ortaya çıkarmalarına yardımcı olan bir platform sunmak.
+
+Yapay zeka kullanarak, büyük şirketlerin asla sizlere getiremediği bir deneyim sunmak.
 
 ## Ana Fikir 
 
-Teknoloji, herkesin yaratıcılığını özgürce ifade edebileceği bir alan olmalı. XenLauncher, cihazları birer sanat eseri haline getirerek sıradanlığı benzersizliğe dönüştürüyor.
+Teknoloji, herkesin yaratıcılığını özgürce ifade edebileceği bir alan olmalı. Yapay zeka kullanırken, kesinlikle özgürlük ve güvenilirlik olmalı.
 
 Özgürlük ve yaratıcılığı teşvik eden yenilikçi bir çözüm.
 
@@ -27,7 +28,7 @@ Yapay zeka ile insanların dijital cihazlarında kendi benzersiz dünyalarını 
 
 ## Hedef Kitle
 
-Kişiselleştirme seven gençler, teknoloji tutkunları ve benzersiz cihaz deneyimleri arayanlar.
+Kişiselleştirme seven gençler, teknoloji tutkunları ve benzersiz cihaz deneyimleri arayanlar, hikaye severler, rol yapmaktan hoşlananlar, fütüristler.
   
 
 
