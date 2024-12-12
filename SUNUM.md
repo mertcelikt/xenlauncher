@@ -1,10 +1,5 @@
 
 # XenLauncher
-
-  
-![İstinye Üniversitesi](https://user-uploads.perchance.org/file/6cc596e75d7c5a180a2e21350acd1556.webp)
-
-
   
 
 ## Projemizin Amacı
@@ -30,8 +25,26 @@ Yapay zeka ile insanların dijital cihazlarında kendi benzersiz dünyalarını 
 
 Kişiselleştirme seven gençler, teknoloji tutkunları ve benzersiz cihaz deneyimleri arayanlar, hikaye severler, rol yapmaktan hoşlananlar, fütüristler.
   
+## Benzer Uygulamalar
 
+Nova Launcher, Niagara Launcher, Smart Launcher 6, AIO Launcher, Hyperion Launcher, Action Launcher, Microsoft Launcher, Square Home.
 
+![İstinye Üniversitesi](https://files.catbox.moe/5ruvo9.webp)
 
+## Platform Desteği
+
+Android 7.0+
+
+## Önemli Özellikler
+
+- **Özelleştirilebilir Başlatıcı Arayüzü:** Bireysel zevklere uygun arayüz oluşturma, düzenleme ve kişiselleştirme.  
+- **Dinamik Simgeler Tasarımı:** Uygulama simgelerini kolayca özelleştirme, içe ve dışa aktarma.  
+- **Uyarlanabilir Renk Temaları:** Ruh haline veya stile uygun renk şemalarını zahmetsizce değiştirme. 
+- Kullanıcılar bir **yapay zeka avatarını** içe ve dışa aktarabilecek (Yapay zeka DAHİL DEĞİL).  
+- Yapay zeka avatarının cihazın **ana ekranında** yer alması desteği.  
+- Akıcı yapay zeka avatar **animasyonları** desteği.  
+- **TTS (Metinden Sese)** ve **STT (Sesten Metne)** desteği.  
+- Yapay zeka **sohbet odası** seçeneği.  
+- Genel yapay zeka sohbet işlevleri (örneğin: **kişilik, mesaj stili, konuşma tarzı**).  
   
   
