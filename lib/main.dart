@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'core/routes.dart';
 
 
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();  // Flutter widget'larını başlat
   runApp(const MyApp());
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routerConfig: router,  // go_router yapılandırmamızı kullan
-      debugShowCheckedModeBanner: false,  // Debug bandını kaldır
+      debugShowCheckedModeBanner: false,
+        // Debug bandını kaldır
     );
   }
 }

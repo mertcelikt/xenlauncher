@@ -28,4 +28,5 @@ flutter:
     - assets/images/          # Görseller için
     - assets/icons/            # İkonlar için
     - assets/languages/         # Dil dosyaları için
-    - assets/motions/           # Animasyon dosyaları için
+    - assets/motions/ 
+    - assets/images/resim.jpg          # Animasyon dosyaları için

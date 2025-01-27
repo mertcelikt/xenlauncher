@@ -9,6 +9,8 @@ import '../screens/loading_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/profile_screen.dart';
 import '../screens/voice_screen.dart';
+import '../screens/register_screen.dart';
+import '../screens/login_screen.dart';
 
 
 
@@ -19,29 +21,60 @@ final router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) => const LoadingScreen(),
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const LoadingScreen(),
+      ),
     ),
     GoRoute(
       path: '/home',
-      builder: (context, state) => const HomeScreen(),
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const HomeScreen(),
+      ),
     ),
     GoRoute(
       path: '/profile',
-      builder: (context, state) => const ProfileScreen(),
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const ProfileScreen(),
+      ),
     ),
-    GoRoute (
-      path:'/voice',
-      builder: (context, state) => const VoiceScreen(),
+    GoRoute(
+      path: '/voice',
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const VoiceScreen(),
+      ),
     ),
-     GoRoute (
-      path:'/search',
-      builder: (context, state) => const SearchScreen(),
+    GoRoute(
+      path: '/login',
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const LoginScreen(),
+      ),
     ),
-    GoRoute (
-      path:'/history',
-      builder: (context, state) => const HistoryScreen(),
+   
+    GoRoute(
+      path: '/register',
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const RegisterScreen(),
+      ),
     ),
-
-
+    GoRoute(
+      path: '/search',
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const SearchScreen(),
+      ),
+    ),
+    GoRoute(
+      path: '/history',
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const HistoryScreen(),
+      ),
+    ),
   ],
 );
