@@ -73,5 +73,12 @@ final router = GoRouter(
         child: const HistoryScreen(),
       ),
     ),
+    GoRoute(
+      path: '/settings',
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const SettingsScreen(),
+      ),
+    ),
   ],
 );
