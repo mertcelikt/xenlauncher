@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _buildAnimationPlaceholder(),
+            
             SizedBox(height: 24),
             _buildActionButtons(context),
           ],
@@ -90,21 +90,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-
-  Widget _buildAnimationPlaceholder() {
-    return Container(
-      width: 140,
-      height: 140,
-      decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.2),
-        shape: BoxShape.circle,
-        boxShadow: [
-          BoxShadow(color: Colors.black26, blurRadius: 10, spreadRadius: 2),
-        ],
-      ),
-      child: Icon(Icons.play_circle_fill, size: 70, color: Colors.white),
-    );
-  }
 
  
   Widget _buildActionButtons(BuildContext context) {
