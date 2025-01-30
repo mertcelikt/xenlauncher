@@ -3,7 +3,7 @@
 
   
 
-![İstinye Üniversitesi](https://logo-suggestion.renderforest.com/suggestions-images/02a6/c25f/02a6c25f6e4bb2c6f82e270ac918b439.png)
+![İstinye Üniversitesi](https://www.unitededucation.com/linklogoch/istinye-university-logo.png)
 
   
 
@@ -125,7 +125,15 @@ lib/
 
 ## Ekran Görüntüleri
 
-EKLENECEK
+![Alt text](screenshots/img1.jpg)
+![Alt text](screenshots/img2.jpg)
+![Alt text](screenshots/img3.jpg)
+![Alt text](screenshots/img4.jpg)
+![Alt text](screenshots/img5.jpg)
+![Alt text](screenshots/img6.jpg)
+![Alt text](screenshots/img7.jpg)
+![Alt text](screenshots/img8.jpg)
+
 
   
 
