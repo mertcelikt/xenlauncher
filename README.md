@@ -150,6 +150,8 @@ lib/
 5. Pull Request oluşturun
 
   
+## Lütfen tanıtım videosunu izeyin
+[Download sunumvid.mp4](video/sunumvid.mp4)
 
 ## Lisans
 
