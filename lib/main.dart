@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'core/routes.dart';
-
+import 'package:provider/provider.dart';
+import 'theme_provider.dart'; 
+import 'profile_screen.dart';
 
 
 void main() {
