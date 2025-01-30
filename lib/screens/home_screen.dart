@@ -9,6 +9,7 @@ import 'package:lottie/lottie.dart';
 import '../core/constants.dart';
 import '../widgets/bottom_menu.dart';
 
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 

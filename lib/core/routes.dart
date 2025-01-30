@@ -11,6 +11,7 @@ import '../screens/profile_screen.dart';
 import '../screens/voice_screen.dart';
 import '../screens/register_screen.dart';
 import '../screens/login_screen.dart';
+import '../screens/setting_screen.dart';
 
 // Router yapılandırması
 final router = GoRouter(
