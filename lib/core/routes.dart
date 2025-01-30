@@ -12,9 +12,6 @@ import '../screens/voice_screen.dart';
 import '../screens/register_screen.dart';
 import '../screens/login_screen.dart';
 
-
-
-
 // Router yapılandırması
 final router = GoRouter(
   initialLocation: '/', // Başlangıç rotası
@@ -54,7 +51,6 @@ final router = GoRouter(
         child: const LoginScreen(),
       ),
     ),
-   
     GoRoute(
       path: '/register',
       pageBuilder: (context, state) => NoTransitionPage<void>(

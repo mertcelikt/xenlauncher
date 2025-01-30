@@ -11,62 +11,47 @@ class LoadingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 34, 73, 126),
-
-
+      backgroundColor: const Color.fromARGB(255, 34, 73, 126),
       body: SizedBox.expand(
-           // width: double.infinity,
-            child: Column(
-              children: [
-                // Logo bölümü
-                Expanded
-                (
-                  child:Container( 
-                  
-                
-                  width: 350,
-                  height: 350,
-                  child: Image.asset(
-                    'assets/images/logo.webp',
-                    fit: BoxFit.contain,
-                  ),
+        // width: double.infinity,
+        child: Column(
+          children: [
+            // Logo bölümü
+            Expanded(
+              child: SizedBox(
+                width: 350,
+                height: 350,
+                child: Image.asset(
+                  'assets/images/logo.webp',
+                  fit: BoxFit.contain,
                 ),
-                  ),
-               
-                
-                
-                
-                // Yükleniyor yazısı
-                //CircularProgressIndicator(),
-                InkWell(
-                  onTap:() => context.go("/home"),
-                child: SizedBox(
-                  width:200,
-                child:DotLottieLoader.fromAsset("assets/motions/loading.lottie",
-                  frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
-                if (dotlottie != null) {
-                  return Lottie.memory(dotlottie.animations.values.single);
-                } else {
-                  return Container();
-                }
-              },
               ),
-                ),  
-                ), 
-                
-               
+            ),
 
-
-                //biraz boşluk lazım
-                SizedBox(height:1),
-              ],
-                  ),
+            // Yükleniyor yazısı
+            //CircularProgressIndicator(),
+            InkWell(
+              onTap: () => context.go("/home"),
+              child: SizedBox(
+                width: 200,
+                child: DotLottieLoader.fromAsset(
+                  "assets/motions/loading.lottie",
+                  frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
+                    if (dotlottie != null) {
+                      return Lottie.memory(dotlottie.animations.values.single);
+                    } else {
+                      return Container();
+                    }
+                  },
                 ),
-              
-            );
-          
-        
-      
-    
+              ),
+            ),
+
+            //biraz boşluk lazım
+            const SizedBox(height: 1),
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -35,18 +35,18 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             // Drawer Header
-            Container(
+            SizedBox(
               height: 200,
               // color: Colors.blue,
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(
+                  Icon(
                     CupertinoIcons.person_circle,
                     size: 80,
                     color: Colors.black87,
                   ),
-                  const SizedBox(height: 10),
+                  SizedBox(height: 10),
                 ],
               ),
             ),
@@ -109,68 +109,52 @@ class HomeScreen extends StatelessWidget {
       ),
 
       // Alt navigasyon çubuğu
-      bottomNavigationBar: Container(
-        height:70,
-        child:Row(
+      bottomNavigationBar: SizedBox(
+        height: 70,
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            IconButton(onPressed: () { 
-              context.go("/home");
-            },
-            icon: Icon (
-              CupertinoIcons.home,
-            ),
-
+            IconButton(
+              onPressed: () {
+                context.go("/home");
+              },
+              icon: const Icon(
+                CupertinoIcons.home,
+              ),
             ),
             IconButton(
               onPressed: () {
                 context.go("/search");
               },
-              icon: Icon(
+              icon: const Icon(
                 CupertinoIcons.search,
               ),
             ),
-
-            
-
-            IconButton(onPressed: () {
-              context.go("/voice");
-
-            },
-             icon: Icon(
-              Icons.android,
-             ),
+            IconButton(
+              onPressed: () {
+                context.go("/voice");
+              },
+              icon: const Icon(
+                Icons.android,
+              ),
             ),
-
-            IconButton(onPressed: () {},
-             icon: Icon(
-              CupertinoIcons.video_camera,
-             ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                CupertinoIcons.video_camera,
+              ),
             ),
-            IconButton(onPressed: () {
-              context.go("/profile");
-
-            },
-
-          
-             icon: Icon(
-              CupertinoIcons.person,
-             ),
+            IconButton(
+              onPressed: () {
+                context.go("/profile");
+              },
+              icon: const Icon(
+                CupertinoIcons.person,
+              ),
             ),
-
-
-
-
-
-            
- 
-
           ],
-        
         ),
-      
-    ),
+      ),
     );
-    
   }
 }
