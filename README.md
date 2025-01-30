@@ -18,7 +18,7 @@ Bu uygulama sayesinde kullanıcı, duvar kağıtlarını, diğer uygulama simgel
 ## Ekibimiz
 
 -  **Danışman:**  
-[https://github.com/keyvanarasteh](Keyvan Arasteh)
+[https://github.com/keyvanarasteh] (Keyvan Arasteh)
 
 
 -  **Takım Üyeleri:**
