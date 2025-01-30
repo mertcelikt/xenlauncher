@@ -22,7 +22,7 @@ class LoadingScreen extends StatelessWidget {
                 width: 200,
                 height: 100,
                 child: Image.asset(
-                  'assets/images/logo.webp',
+                  'assets/images/Logo.png',
                   fit: BoxFit.contain,
                 ),
               ),

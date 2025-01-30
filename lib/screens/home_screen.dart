@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
         ),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 68, 6, 68),
+        backgroundColor: const Color.fromARGB(255, 90, 27, 150),
         elevation: 4,
         actions: [
           IconButton(
