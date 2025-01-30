@@ -131,7 +131,7 @@ class SearchScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Müzik Duvar Kağıdı  ${index + 1}",
+                              "Müzik Duvar Kağıdı..  ${index + 1}",
                               style: Theme.of(context).textTheme.titleMedium,
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
