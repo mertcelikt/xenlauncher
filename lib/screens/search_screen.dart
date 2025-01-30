@@ -119,7 +119,7 @@ class SearchScreen extends StatelessWidget {
                           decoration: BoxDecoration(
                             color: Theme.of(context).colorScheme.secondaryContainer,
                             image: DecorationImage(
-                              image: AssetImage('assets/images/sample${index % 4 + 1}.jpg'),
+                              image: AssetImage('assets/images/duvarkağıdı1.jpg'),
                               fit: BoxFit.cover,
                             ),
                           ),
