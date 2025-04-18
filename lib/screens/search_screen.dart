@@ -119,7 +119,7 @@ class SearchScreen extends StatelessWidget {
                           decoration: BoxDecoration(
                             color: Theme.of(context).colorScheme.secondaryContainer,
                             image: DecorationImage(
-                              image: AssetImage('assets/images/sample${index % 4 + 1}.jpg'),
+                              image: AssetImage('assets/images/duvarkağıdı1.jpg'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -131,13 +131,13 @@ class SearchScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Başlık ${index + 1}",
+                              "Müzik Duvar Kağıdı..  ${index + 1}",
                               style: Theme.of(context).textTheme.titleMedium,
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                             ),
                             Text(
-                              "Alt başlık açıklama yazısı burada yer alır",
+                              "Kullanıcılarımızın isteği üzerine yapılan bu duvar kağıdı bize müzik ile teknolojinin iç içe geçmiş halini göstermektedir.  ",
                               style: Theme.of(context).textTheme.bodySmall,
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,

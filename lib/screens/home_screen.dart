@@ -1,14 +1,5 @@
-// ana ekran
-
-import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lottie/lottie.dart';
-
-import '../core/constants.dart';
-import '../widgets/bottom_menu.dart';
-
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,145 +7,119 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: arkaplanRenkim, // .fromARGB(255, 35, 47, 59),
-      // AppBar
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 28, 17, 66),
-        title: const Text('Q'),
+        title: Text(
+          'XenLauncher',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+        ),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 90, 27, 150),
+        elevation: 4,
         actions: [
           IconButton(
-            icon: const Icon(CupertinoIcons.app),
-            onPressed: () {},
+            icon: Icon(Icons.settings, color: Colors.white),
+            onPressed: () => context.push("/settings"),
           ),
         ],
       ),
-
-      // Drawer (Yan Menü)
-      drawer: Drawer(
-        backgroundColor: arkaplanRenkim,
-        elevation: 0,
+      drawer: _buildDrawer(context),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [const Color.fromARGB(255, 65, 3, 63), const Color.fromARGB(255, 73, 3, 58)],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Drawer Header
-            SizedBox(
-              height: 200,
-              // color: Colors.blue,
-              child: const Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    CupertinoIcons.person_circle,
-                    size: 80,
-                    color: Colors.black87,
-                  ),
-                  SizedBox(height: 10),
-                ],
-              ),
-            ),
-            // Menü öğeleri
-            ListTile(
-              leading: const Icon(CupertinoIcons.home),
-              title: const Text('Ana Sayfa'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-
-            ListTile(
-              leading: const Icon(CupertinoIcons.search),
-              title: const Text('History'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: const Icon(CupertinoIcons.person),
-              title: const Text('Profile'),
-              onTap: () {
-                context.go("/profile");
-              },
-            ),
-            ListTile(
-              leading: const Icon(CupertinoIcons.settings),
-              title: const Text('Ayarlar'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
+            
+            SizedBox(height: 24),
+            _buildActionButtons(context),
           ],
         ),
       ),
+    );
+  }
 
-      // Ana içerik
-      body: Column(
+ 
+  Widget _buildDrawer(BuildContext context) {
+    return Drawer(
+      child: Column(
         children: [
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.all(16),
-              child: SizedBox(
-                width: double.infinity,
-                child: DotLottieLoader.fromAsset(
-                  "assets/motions/q2.lottie",
-                  frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
-                    if (dotlottie != null) {
-                      return Lottie.memory(dotlottie.animations.values.single);
-                    } else {
-                      return Container();
-                    }
-                  },
-                ),
+          DrawerHeader(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [const Color.fromARGB(255, 56, 130, 189), const Color.fromARGB(255, 52, 111, 158)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
               ),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 40,
+                  backgroundColor: Colors.white,
+                  child: Icon(Icons.person, size: 50, color: const Color.fromARGB(255, 3, 38, 67)),
+                ),
+                SizedBox(height: 10),
+                Text("Hoş Geldiniz!", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+              ],
             ),
           ),
+          _buildDrawerItem(context, Icons.home, "Ana Sayfa", "/"),
+          _buildDrawerItem(context, Icons.search, "Arama", "/search"),
+          _buildDrawerItem(context, Icons.person, "Profil", "/profile"),
+          _buildDrawerItem(context, Icons.settings, "Ayarlar", "/settings"),
+          Spacer(),
+          Divider(),
+          _buildDrawerItem(context, Icons.logout, "Çıkış Yap", "/login", color: const Color.fromARGB(255, 68, 30, 115)),
         ],
       ),
+    );
+  }
 
-      // Alt navigasyon çubuğu
-      bottomNavigationBar: SizedBox(
-        height: 70,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              onPressed: () {
-                context.go("/home");
-              },
-              icon: const Icon(
-                CupertinoIcons.home,
-              ),
-            ),
-            IconButton(
-              onPressed: () {
-                context.go("/search");
-              },
-              icon: const Icon(
-                CupertinoIcons.search,
-              ),
-            ),
-            IconButton(
-              onPressed: () {
-                context.go("/voice");
-              },
-              icon: const Icon(
-                Icons.android,
-              ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                CupertinoIcons.video_camera,
-              ),
-            ),
-            IconButton(
-              onPressed: () {
-                context.go("/profile");
-              },
-              icon: const Icon(
-                CupertinoIcons.person,
-              ),
-            ),
-          ],
+  
+  Widget _buildDrawerItem(BuildContext context, IconData icon, String title, String route, {Color color = const Color.fromARGB(221, 79, 9, 122)}) {
+    return ListTile(
+      leading: Icon(icon, color: color, size: 28),
+      title: Text(title, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+      onTap: () => context.push(route),
+    );
+  }
+
+
+ 
+  Widget _buildActionButtons(BuildContext context) {
+    return Column(
+      children: [
+        _buildActionButton(context, "Sohbet", Icons.chat, "/chat", const Color.fromARGB(255, 83, 3, 91)),
+        _buildActionButton(context, "Arama", Icons.search, "/search", const Color.fromARGB(255, 72, 6, 96)),
+        _buildActionButton(context, "Ayarlar", Icons.settings, "/settings", const Color.fromARGB(255, 66, 4, 83)),
+      ],
+    );
+  }
+
+  
+  Widget _buildActionButton(BuildContext context, String title, IconData icon, String route, Color color) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 10),
+      child: ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: color,
+          foregroundColor: Colors.white,
+          minimumSize: Size(230, 50),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          shadowColor: Colors.black38,
+          elevation: 5,
         ),
+        icon: Icon(icon, size: 26),
+        label: Text(title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
+        onPressed: () => context.push(route),
       ),
     );
   }
